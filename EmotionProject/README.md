@@ -169,6 +169,14 @@ The webcam will start detecting driver emotions in real time.
 
 # 🔌 Hardware Connections
 
+### Circuit Diagram with link : https://app.cirkitdesigner.com/project/261ed2cc-3852-4805-afad-4c0256d3cab4
+
+## Circuit Diagram : 
+
+<img width="1151" height="601" alt="image" src="https://github.com/user-attachments/assets/bd3e07b6-a933-420a-84a7-613ea19a22e2" />
+
+---
+
 ## TFT Display (ST7735)
 
 | TFT Pin | ESP32 Pin |
@@ -181,6 +189,18 @@ The webcam will start detecting driver emotions in real time.
 | DC      | GPIO2     |
 | CS      | GPIO5     |
 | BL      | 3.3V      |
+
+## Display Screen 1.8 128*160 RGB TFT_LCD Output : 
+
+<img width="331.5" height="400" alt="image" src="https://github.com/user-attachments/assets/006429f4-ae3e-4785-a833-e392ff7e4120" />
+
+<img width="331.5" height="400" alt="image" src="https://github.com/user-attachments/assets/30b370e6-6f38-480f-a964-7476312095d0" />
+
+<img width="331.5" height="400" alt="image" src="https://github.com/user-attachments/assets/10ee7222-c042-4e45-9e71-bfa7157561ff" />
+
+<img width="331.5" height="400" alt="image" src="https://github.com/user-attachments/assets/9118ba32-c5c4-4631-bdae-abb2f5d4501f" />
+
+<img width="331.5" height="400" alt="image" src="https://github.com/user-attachments/assets/b4d56c4f-95bb-4000-95c8-d82c23c5b46d" />
 
 ---
 
@@ -208,6 +228,12 @@ The webcam will start detecting driver emotions in real time.
 Battery + → Relay COM
 Relay NO → Motor +
 Motor − → Battery −
+
+----- 
+
+## Laptop Display Input Screen : 
+
+<img width="1151" height="601" alt="image" src="https://github.com/user-attachments/assets/cecaeedd-a7d6-4638-9170-2e0f4028ffd8" />
 
 ---
 
