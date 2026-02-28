@@ -175,6 +175,9 @@ The webcam will start detecting driver emotions in real time.
 
 <img width="1151" height="601" alt="image" src="https://github.com/user-attachments/assets/bd3e07b6-a933-420a-84a7-613ea19a22e2" />
 
+<img width="1151" height="601" alt="image" src="https://github.com/user-attachments/assets/cba679ce-f14f-45f0-9fb3-ceadd72e69ed" />
+
+
 ---
 
 ## TFT Display (ST7735)
