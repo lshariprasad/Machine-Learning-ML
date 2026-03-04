@@ -16,6 +16,7 @@ while True:
         result = DeepFace.analyze(frame, actions=['emotion'], enforce_detection=False)
 
         emotion = result[0]['dominant_emotion']
+        
 
         emotion_map = {
             "happy":"SMILING",
@@ -43,4 +44,5 @@ while True:
         break
 
 cap.release()
+
 cv2.destroyAllWindows()
