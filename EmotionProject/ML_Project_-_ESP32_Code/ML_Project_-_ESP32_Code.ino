@@ -54,6 +54,7 @@ tft.print("Z");
 }
 
 // ☹️ SAD
+
 void drawSad() {
 tft.fillCircle(64,40,30,ST77XX_YELLOW);
 tft.fillCircle(50,30,5,ST77XX_BLACK);
@@ -62,6 +63,7 @@ tft.drawFastHLine(50,60,28,ST77XX_BLACK);
 }
 
 // 😭 CRYING
+
 void drawCry() {
 tft.fillCircle(64,40,30,ST77XX_YELLOW);
 tft.fillCircle(50,30,5,ST77XX_BLACK);
@@ -72,6 +74,7 @@ tft.drawFastHLine(50,60,28,ST77XX_BLACK);
 }
 
 // 😡 ANGER
+
 void drawAnger() {
 tft.fillCircle(64,40,30,ST77XX_RED);
 tft.fillCircle(50,30,5,ST77XX_BLACK);
@@ -82,6 +85,7 @@ tft.drawFastHLine(50,60,28,ST77XX_BLACK);
 }
 
 // 👀 SEARCHING
+
 void drawSearching() {
 tft.fillCircle(64,40,30,ST77XX_YELLOW);
 tft.fillCircle(50,30,8,ST77XX_BLACK);
@@ -140,4 +144,5 @@ else {
 
 }
 }
+
 
