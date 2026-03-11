@@ -14,6 +14,7 @@ Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 String emotion = "";
 
 // 😊 SMILING
+
 void drawSmile() {
 tft.fillCircle(64,40,30,ST77XX_YELLOW);
 tft.fillCircle(50,30,5,ST77XX_BLACK);
@@ -22,6 +23,7 @@ tft.drawFastHLine(50,55,28,ST77XX_BLACK);
 }
 
 // 😐 NEUTRAL
+
 void drawNeutral() {
 tft.fillCircle(64,40,30,ST77XX_YELLOW);
 tft.fillCircle(50,30,5,ST77XX_BLACK);
@@ -30,6 +32,7 @@ tft.drawFastHLine(50,55,28,ST77XX_BLACK);
 }
 
 // 😲 SURPRISED
+
 void drawSurprise() {
 tft.fillCircle(64,40,30,ST77XX_YELLOW);
 tft.fillCircle(50,30,6,ST77XX_BLACK);
@@ -38,6 +41,7 @@ tft.fillCircle(64,55,6,ST77XX_BLACK);
 }
 
 // 😴 SLEEPING
+
 void drawSleep() {
 tft.fillCircle(64,40,30,ST77XX_YELLOW);
 tft.drawFastHLine(45,30,15,ST77XX_BLACK);
@@ -136,3 +140,4 @@ else {
 
 }
 }
+
