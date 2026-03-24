@@ -1,0 +1,35 @@
+# Car Price Prediction using Linear Regression
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error
+
+# Sample dataset
+data = {
+    'Year':[2015,2016,2017,2018,2019,2020,2021,2014,2013,2022],
+    'Mileage':[50000,40000,30000,20000,15000,10000,8000,60000,70000,5000],
+    'Price':[500000,550000,600000,650000,700000,750000,800000,450000,400000,850000]
+}
+
+df = pd.DataFrame(data)
+
+# Features and Target
+X = df[['Year','Mileage']]
+y = df['Price']
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=42)
+
+# Train model
+model = LinearRegression()
+model.fit(X_train,y_train)
+
+# Prediction
+pred = model.predict(X_test)
+
+# Error
+print("Mean Absolute Error:", mean_absolute_error(y_test,pred))
+
+# Predict price of a new car
+print("Predicted Price:", model.predict([[2020,12000]]))
