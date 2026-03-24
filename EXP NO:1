@@ -1,0 +1,36 @@
+# Find-S Algorithm Implementation
+
+import pandas as pd
+
+# Training dataset
+data = {
+    'Sky': ['Sunny', 'Sunny', 'Rainy', 'Sunny'],
+    'Temp': ['Warm', 'Warm', 'Cold', 'Warm'],
+    'Humidity': ['Normal', 'High', 'High', 'High'],
+    'Wind': ['Strong', 'Strong', 'Strong', 'Strong'],
+    'EnjoySport': ['Yes', 'Yes', 'No', 'Yes']
+}
+
+df = pd.DataFrame(data)
+
+print("Training Data:")
+print(df)
+
+# Separate attributes and target
+attributes = df.iloc[:, :-1].values
+target = df.iloc[:, -1].values
+
+# Initialize hypothesis
+hypothesis = attributes[0].copy()
+
+print("\nInitial Hypothesis:", hypothesis)
+
+# Apply Find-S algorithm
+for i in range(len(attributes)):
+    if target[i] == "Yes":
+        for j in range(len(hypothesis)):
+            if hypothesis[j] != attributes[i][j]:
+                hypothesis[j] = '?'
+
+print("\nFinal Most Specific Hypothesis:")
+print(hypothesis)
