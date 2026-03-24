@@ -1,0 +1,24 @@
+# Find-S Algorithm
+
+data = [
+    ['Sunny','Warm','Normal','Strong','Yes'],
+    ['Sunny','Warm','High','Strong','Yes'],
+    ['Rainy','Cold','High','Strong','No'],
+    ['Sunny','Warm','High','Strong','Yes']
+]
+
+# number of attributes
+n = len(data[0]) - 1
+
+# initialize hypothesis
+hypothesis = ['0'] * n
+
+for sample in data:
+    if sample[-1] == "Yes":
+        for i in range(n):
+            if hypothesis[i] == '0':
+                hypothesis[i] = sample[i]
+            elif hypothesis[i] != sample[i]:
+                hypothesis[i] = '?'
+
+print("Final Hypothesis:", hypothesis)
