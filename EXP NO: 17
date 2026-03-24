@@ -1,0 +1,36 @@
+# Mobile Price Prediction using Decision Tree
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+# Sample dataset
+data = {
+    'RAM':[2,3,4,6,8,12,16,3,4,6],
+    'Storage':[16,32,64,128,128,256,512,32,64,128],
+    'Battery':[3000,3200,3500,4000,4500,5000,6000,3300,3600,4200],
+    'Price_Range':[0,0,1,1,2,2,3,0,1,2]   # 0=Low,1=Medium,2=High,3=Premium
+}
+
+df = pd.DataFrame(data)
+
+# Features and target
+X = df[['RAM','Storage','Battery']]
+y = df['Price_Range']
+
+# Split dataset
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=42)
+
+# Train model
+model = DecisionTreeClassifier()
+model.fit(X_train,y_train)
+
+# Predict
+pred = model.predict(X_test)
+
+# Accuracy
+print("Accuracy:",accuracy_score(y_test,pred))
+
+# Predict new mobile price range
+print("Predicted Price Range:",model.predict([[8,128,4500]]))
