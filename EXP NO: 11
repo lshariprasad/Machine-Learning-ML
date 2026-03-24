@@ -1,0 +1,31 @@
+# Credit Score Classification
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+# Dataset
+data = {
+    'Income':[25000,40000,50000,60000,20000,70000,80000,30000,90000,100000],
+    'Age':[25,35,45,32,23,40,50,28,55,60],
+    'Loan':[5000,10000,15000,20000,3000,25000,30000,7000,35000,40000],
+    'Score':[0,1,1,2,0,2,2,1,2,2]   # 0=Low,1=Medium,2=High
+}
+
+df = pd.DataFrame(data)
+
+X = df[['Income','Age','Loan']]
+y = df['Score']
+
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2)
+
+model = DecisionTreeClassifier()
+model.fit(X_train,y_train)
+
+pred = model.predict(X_test)
+
+print("Accuracy:",accuracy_score(y_test,pred))
+
+# Predict new customer
+print("Predicted Credit Score:", model.predict([[45000,30,12000]]))
